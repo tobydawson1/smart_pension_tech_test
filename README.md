@@ -35,7 +35,7 @@ Remember to document __how__ you identified the bugs and attach your findings to
 
 ```
 Error says that the surname form is blank when you try to add a new employee even if the labelled surname form is filled in.
-This is due to ‘new.htmp.erb’ the second form is labeled as surname but the input it accepts is stored as the middle name so
+This is due to ‘new.html.erb’ the second form is labeled as surname but the input it accepts is stored as the middle name so
 the surname in the database is therefore blank causing the error
 ```
 
