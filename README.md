@@ -27,4 +27,4 @@ These instructions will get the application up and running on your local machine
      
 * Navigate to: http://localhost:3000
 
-Remember to document __how__ you identified the bugs and attach your findings to your email back to us, have fun!!
+Remember to document __how__ you identified the bugs and attach your findings to your email back to us, have fun!
