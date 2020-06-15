@@ -34,33 +34,44 @@ Remember to document __how__ you identified the bugs and attach your findings to
 ### Bug 1 
 
 ```
-Error says that the surname form is blank when you try to add a new employee even if the labelled surname form is filled in. This is due to ‘new.htmp.erb’ the second form is labeled as surname but the input it accepts is stored as the middle name so the surname in the database is therefore blank causing the error
+Error says that the surname form is blank when you try to add a new employee even if the labelled surname form is filled in.
+This is due to ‘new.htmp.erb’ the second form is labeled as surname but the input it accepts is stored as the middle name so
+the surname in the database is therefore blank causing the error
 ```
 
 ### Possible fix
 
 ```
-A fix for this could be done a number of ways. I can see that a separate migration has been added   called ‘add_middle_name_to_employees_table’ what this tells me is that middle name is a required piece of information so simply changing the form asking for the middle name to the surname may not suffice. Adding another form correctly assigned to take the take data for the middle name is a good option and changing the now 3rd form to correctly input data into the surname row would work. 
+A fix for this could be done a number of ways. I can see that a separate migration has been added   called 
+‘add_middle_name_to_employees_table’ what this tells me is that middle name is a required piece of information so simply 
+changing the form asking for the middle name to the surname may not suffice. Adding another form correctly assigned to take the
+take data for the middle name is a good option and changing the now 3rd form to correctly input data into the surname row would
+work. 
 ```
 ### Bug 2
 
 ```
-When you try to edit a pre existing employee it throws up an error regarding ID’s. This is due to the edit_company_employee_path being wrong. I figured this out by playing with the href.
+When you try to edit a pre existing employee it throws up an error regarding ID’s. This is due to the
+edit_company_employee_path being wrong. I figured this out by playing with the href.
 ```
 ### Possible fix
 
 ```
-A fix would be to alter line 11 in ‘show.html.erb’ the link to edit should have (@company, @employee) within its parenthesis. This will give the ID’s in the correct order. 
+A fix would be to alter line 11 in ‘show.html.erb’ the link to edit should have (@company, @employee) within its parenthesis.
+This will give the ID’s in the correct order. 
 ```
 
 ### Bug 3
 
 ```
-When clicking ‘show’ in order to check the employees for various company’s, it is always taking you to the first company in the database. 
+When clicking ‘show’ in order to check the employees for various company’s, it is always taking you to the first company in the
+database. 
 ```
 
 ### Possible fix
 
 ```
-My fix for this would be to look into ‘companies_controller’ and look for the ‘show’ method and specifically line 11. @company = Company.first is utilising a method that will always show the the first piece of data in the database. Simply removing this line should solve this bug. 
+My fix for this would be to look into ‘companies_controller’ and look for the ‘show’ method and specifically line 11. 
+@company= Company.first is utilising a method that will always show the the first piece of data in the database. Simply
+removing this line should solve this bug. 
 ```
