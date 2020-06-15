@@ -39,7 +39,7 @@ This is due to ‘new.htmp.erb’ the second form is labeled as surname but the 
 the surname in the database is therefore blank causing the error
 ```
 
-### Possible fix
+#### Possible fix
 
 ```
 A fix for this could be done a number of ways. I can see that a separate migration has been added   called 
@@ -54,7 +54,7 @@ work.
 When you try to edit a pre existing employee it throws up an error regarding ID’s. This is due to the
 edit_company_employee_path being wrong. I figured this out by playing with the href.
 ```
-### Possible fix
+#### Possible fix
 
 ```
 A fix would be to alter line 11 in ‘show.html.erb’ the link to edit should have (@company, @employee) within its parenthesis.
@@ -68,7 +68,7 @@ When clicking ‘show’ in order to check the employees for various company’s
 database. 
 ```
 
-### Possible fix
+#### Possible fix
 
 ```
 My fix for this would be to look into ‘companies_controller’ and look for the ‘show’ method and specifically line 11. 
